@@ -1,0 +1,148 @@
+:root {
+    /* Color variables for consistent theming */
+    --primary: #1B263B;
+    --secondary: #415A77;
+    --success: #28a745;
+    --info: hsl(188, 78%, 41%);
+    --warning: #ff7f07;
+    --danger: #dc3545;
+    --light: #E0E1DD;
+    --dark: #0D1B2A;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--light); /* Light background for contrast */
+}
+
+main {
+    flex-grow: 1; /* Ensures main content takes available space */
+}
+
+.navbar .nav-link {
+    font-size: 1.2rem;
+    color: var(--light); /* Consistent light text color */
+    margin: 0 1rem;
+    padding: 0.5rem;
+}
+
+/* Active and hover states for navbar links */
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: var(--light);
+    background-color: var(--danger); /* Red background for emphasis */
+}
+
+/* Hero section description box */
+.hero-description {
+    background-color: rgba(0, 0, 0, 0.4) !important; /* Semi-transparent black */
+    padding: 1rem;
+}
+
+/* Dark background with light text */
+.bg-dark {
+    background-color: var(--dark) !important;
+    color: var(--light) !important;
+}
+
+/* Reusable shadow effect for elements */
+.box-shadow {
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+
+/* Text shadow for enhanced readability */
+.text-shadow {
+    text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
+}
+
+/* Gradient text effect */
+.text-gradient {
+    background: linear-gradient(45deg, var(--success), var(--info));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Transparent image effect */
+.transparent-img {
+    opacity: 0.8; /* Slight transparency */
+}
+
+/* Gradient background animation */
+.gradient-background {
+    background: linear-gradient(191deg, var(--primary), var(--secondary), var(--dark), var(--secondary), var(--dark));
+    background-size: 300% 300%; /* Smooth scrolling effect */
+    animation: gradient-animation 40s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Light background for content sections */
+.bg-light {
+    background-color: var(--light) !important;
+}
+
+/* Back to top button */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none; /* Hidden by default */
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    background-color: #007bff; /* Primary color */
+    color: white;
+    cursor: pointer;
+    border-radius: 50%; /* Circular shape */
+    transition: opacity 0.3s ease-in-out;
+}
+
+#backToTop:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Button styles with hover and active effects */
+button, .btn {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover, .btn:hover {
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active, .btn:active {
+    transform: translateY(0); /* Return to original position */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Card styling with hover effect */
+.card {
+    overflow: hidden; /* Prevents overflow for better visuals */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.4s ease;
+}
+
+.card:hover {
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px !important; /* Stronger shadow on hover */
+}
+
+/* Social links in footer */
+#footer-socials a {
+    text-decoration: none !important; /* No underline on links */
+}

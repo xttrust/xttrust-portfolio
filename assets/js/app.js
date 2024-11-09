@@ -12,3 +12,20 @@ window.onscroll = function() {
 document.getElementById("backToTop").onclick = function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
+
+// Add animation to page
+const observer = new IntersectionObserver((entries) => {
+   entries.forEach((entry) => {
+       if (entry.isIntersecting) {
+           entry.target.classList.add('show');
+           observer.unobserve(entry.target); // Optional: Stop observing after showing
+       } else {
+           entry.target.classList.remove('show');
+       }
+   });
+});
+
+// Select elements to observe
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));

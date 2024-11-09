@@ -146,3 +146,79 @@ button:active, .btn:active {
 #footer-socials a {
     text-decoration: none !important; /* No underline on links */
 }
+
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1.2s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+/* Transition delay for children, repeat for all needed children */
+
+.additional-skill:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.additional-skill:nth-child(3) {
+    transition-delay: 300ms;
+}
+
+.additional-skill:nth-child(4) {
+    transition-delay: 400ms;
+}
+
+.additional-skill:nth-child(5) {
+    transition-delay: 500ms;
+}
+
+.additional-skill:nth-child(6) {
+    transition-delay: 600ms;
+}
+
+/* Projects section */
+.project:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.project:nth-child(3) {
+    transition-delay: 300ms;
+}
+
+.project:nth-child(4) {
+    transition-delay: 400ms;
+}
+
+/* CodeInstitute Projects section */
+.ci-project:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.ci-project:nth-child(3) {
+    transition-delay: 300ms;
+}
+
+.ci-project:nth-child(4) {
+    transition-delay: 400ms;
+}
+
+.ci-project:nth-child(5) {
+    transition-delay: 500ms;
+}
+
+.ci-project:nth-child(6) {
+    transition-delay: 600ms;
+}
